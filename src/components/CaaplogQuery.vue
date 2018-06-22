@@ -37,7 +37,7 @@
                 </div>
                 <div class="flex flex_1">
                     <div class=" flex_1">
-                        <label>查询条数</label>
+                        <label>查询条数 </label>
                     </div>
                     <div class="flex_2 item">
                         <div class="input_item">
