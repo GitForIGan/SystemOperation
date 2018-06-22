@@ -1,6 +1,6 @@
 
-// const urlIP = document.location.origin; // 获取当前URL路径，测试环境、生产环境
-const urlIP = "http://10.100.17.204/ydqdcaap"; // 获取当前URL路径，测试环境、生产环境
+const urlIP = document.location.origin; // 获取当前URL路径，测试环境、生产环境
+// const urlIP = "http://10.100.17.204/ydqdcaap"; // 获取当前URL路径，测试环境、生产环境
 
 const ProjectNameCaap = "ydqdsass"; // 当前工程名称，移动展业系统后台应用目前是统一的   
 const ProjectNameCEIS = "ydqdceis"; // 当前工程名称，移动展业系统后台应用目前是统一的   
