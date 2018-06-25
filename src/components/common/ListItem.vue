@@ -43,6 +43,7 @@ export default {
     methods:{
         hideLogDetailFun:function(){
             this.hideLogDetail = false;
+            this.$emit("ishowListItemFalse")
         }
     },
     watch: {

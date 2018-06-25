@@ -73,3 +73,4 @@ CONFIG.QUERY_MP_POLICY_TRAN_STATUS = {
     }
 }
 export default {CONFIG}
+

@@ -41,7 +41,7 @@
                 </div>
                 <div class="flex_2 item">
                     <div class="input_item">
-                        <input v-model="caapLogQuery.itemCounts" placeholder="请录入查询条数" maxlength="2">
+                        <input v-model="caapLogQuery.itemCounts" placeholder="请录入查询条数" maxlength="200">
                     </div>
                 </div>
             </div>
@@ -59,11 +59,28 @@
                     <div class="flex_1">{{index}}</div>
                     <div class="flex_1">{{item.agentCode}}</div>
                     <div class="flex_1">{{item.resultCode}}</div>
-                   <button class="flex_1" @click="showDetails(item)" style="color: #11c1f3">详细</button>
+                    <button class="flex_1" @click="showDetails(item)" style="color: #11c1f3">详细</button>
                 </div>
             </div>
         </div>
-        <list-item :showData="showData"  :isShowListItem= "true" @click="ishowListItemFalse"></list-item>
+        <div class="dialog" v-show="isDetailShow">
+            <div class="dia_bg"></div>
+            <div class="dia_con">
+                <div class="detailItem">
+                    <div v-for="(value,key,index) in showData" :key="index">
+                        <div v-show="value !=null && value!='' && value.length>0"> 
+                            <div class="flex_1 detailRowitem">{{key}}</div>
+                            <div>
+                                  <div class="flex_1 ">{{value}}</div>
+                            </div>
+                          
+                        </div>
+
+                    </div>
+                </div>
+                <div class="button" @click="hideLogDetailFun()">返回</div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -82,8 +99,8 @@ export default {
       resultHead: ["序号", "用户", "结果", "详细"],
       resultData: {}, // 显示查询数据
       isShowResultData: false,
-      showData:null,
-      isShowData:false
+      showData: null,
+      isDetailShow: false
     };
     // caapLogQuery.projectName= "sdfsdfdsf";
     // return caapLogQuery;
@@ -104,7 +121,8 @@ export default {
       this.$axios
         .post(HTTP_CONFIG.CONFIG.QUERY_CAAP_LOG.url, postData)
         .then(response => {
-          var data = response.data;
+          var data = response;
+          console.log(response);
           if (typeof data.logList != "undefined" && data.logList.length > 0) {
             this.isShowResultData = true;
             this.resultData = data.logList;
@@ -114,12 +132,12 @@ export default {
           console.log(error);
         });
     },
-    showDetails:function(data){
-        this.showData = data;
-        this.isShowData = true;
+    showDetails: function(data) {
+      this.showData = data;
+      this.isDetailShow = true;
     },
-    ishowListItemFalse:function(){
-         this.isShowData = false;
+    hideLogDetailFun: function() {
+      this.isDetailShow = false;
     }
   }
 };
@@ -183,8 +201,8 @@ export default {
   width: 100%;
   padding-top: 10px;
 }
-.result-item{
-    flex-direction: column;
+.result-item {
+  flex-direction: column;
 }
 </style>
 

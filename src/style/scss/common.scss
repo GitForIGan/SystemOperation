@@ -173,7 +173,7 @@
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background-color: rgba(100,0,0,.5);
+    background-color: rgba(46, 9, 9, 0.068);
     -webkit-animation: fadein .1s linear;
     animation: fadein .1s ease-in;
 }
@@ -208,6 +208,7 @@
 		width: 100%;
 		max-height: 350px;
 		overflow: scroll;
+		word-wrap: break-word;
 	}
 
 	.detailRowitem{

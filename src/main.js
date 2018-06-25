@@ -4,12 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueResource from 'vue-resource'
+import inject from './plugin/inject'
 import CSS from './style/scss/common.scss'
 import componentCss from './style/scss/component.scss'
-import axios from 'axios' // 引入axios
 
 Vue.use(VueResource)
-Vue.prototype.$axios = axios;   // vue中使用axios
+Vue.use(inject)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
