@@ -13,22 +13,24 @@
 export default {
   name: "my-menu",
   props: {
-    myVisible: {
+    isVisible: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   watch: {
-    myVisible() {
+    isVisible() {
+      console.log('is entered');
       this.toggleShow();
     }
   },
   methods: {
     toggleMenu() {
-      this.$emit("update:myVisible", !this.myVisible);
-      // console.log(this.myVisible)
+      console.log(this.myVisible);
+      this.$emit("update:isVisible", !this.isVisible);
     },
     toggleShow() {
+      console.log('enterd toggleShow');
       let target = this.$refs.barPart;
       let test = target.classList.contains("togglehide");
       if (!test) {

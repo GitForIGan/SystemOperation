@@ -3,9 +3,8 @@
         <back-title titleText="生产问题排查" back-url="/"></back-title>
             <i class="icon-left iconfont icon-menu" @click="toggleShowMenu"></i>
             <!-- <mt-button icon="back" @click="toggleShowMenu">back</mt-button> -->
-        <my-menu :my-visible="visible">
+        <my-menu :is-visible.sync="visible">
             <template slot="menu-title">项目</template>
-
         </my-menu>
     </div>
 
@@ -19,7 +18,7 @@ import BackTitle from "./common/BackTitle";
 export default {
   data() {
     return {
-      visible: true
+      visible: false
     };
   },
   components: {
