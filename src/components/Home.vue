@@ -36,8 +36,8 @@
                     </div>
                 </div>
                 <div class=" module flex_cloum">
-                    <div class="flex_1 icon" ui-sref=".problemAnaly">
-                        <img src="../assets/home/appLog.png" alt="" />
+                    <div class="flex_1 icon">
+                        <router-link to="/prodProblemAnaly"><img src="../assets/home/appLog.png" alt="" /></router-link>
                     </div>
                     <div class="font_bottom flex_9">
                         <span>生产问题</span>

@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import CaapLogQuery from'@/components/CaapLogQuery'
 import NetWorkTest from '@/components/NetWorkTest'
 import AppErrorLog from '@/components/AppErrorLog'
+import ProdProblemAnaly from '@/components/ProdProblemAnalysis'
 
 
 
@@ -37,9 +38,9 @@ export default new Router({
       component: CaapLogQuery
     },
     {
-      path: '/caapLogQuery',
-      name: 'CaapLogQuery',
-      component: CaapLogQuery
+      path: '/prodProblemAnaly',
+      name: 'prodProblemAnaly',
+      component: ProdProblemAnaly
     }
   ]
 })

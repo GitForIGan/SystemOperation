@@ -53,7 +53,7 @@ export function responseFailFunc (responseError) {
     // ...
     return Promise.reject(responseError);
 }
-
+// 配置请求头为
 export function requestHeaderFunc(config){
     config.data = qs.stringify(config.data);
     config.headers['Content-Type'] = 'application/x-www-form-urlencoded';

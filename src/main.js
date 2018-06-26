@@ -7,9 +7,11 @@ import VueResource from 'vue-resource'
 import inject from './plugin/inject'
 import CSS from './style/scss/common.scss'
 import componentCss from './style/scss/component.scss'
+import '@/assets/fontIcon/iconfont.css'
+
 
 Vue.use(VueResource)
-Vue.use(inject)
+Vue.use(inject) // 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
