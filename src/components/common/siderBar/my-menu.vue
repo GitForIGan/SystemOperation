@@ -32,12 +32,16 @@ export default {
     toggleShow() {
       console.log('enterd toggleShow');
       let target = this.$refs.barPart;
+      console.log(target.classList);
+
       let test = target.classList.contains("togglehide");
+      console.log("test is " + test);
       if (!test) {
         target.classList.add("togglehide");
         this.$emit("closeBar"); // 关闭导航标签的回调
         let OpenMenu = target.querySelectorAll(".openMenu");
         let OpenIcon = target.querySelectorAll(".openIcon");
+        console.log(OpenMenu);
         this.$refs.barPart.style.left = -this.$refs.barPart.offsetWidth + "px";
         for (let i = 0; i < OpenMenu.length; i++) {
           OpenMenu[i].classList.remove("openMenu");
