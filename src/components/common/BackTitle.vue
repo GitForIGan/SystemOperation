@@ -34,12 +34,14 @@ $button-color: white;
   padding-top: 15px;
   vertical-align: middle;
   font-size: 15px;
-  // top: 50%;
 }
 #back-title {
   background-color: rgb(33, 192, 231);
   width: 100%;
   height: 40px;
+}
+#root-title{
+    background-color: rgb(33, 192, 231);
 }
 </style>
 

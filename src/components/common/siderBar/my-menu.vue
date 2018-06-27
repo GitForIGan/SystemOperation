@@ -30,9 +30,9 @@ export default {
       this.$emit("update:isVisible", !this.isVisible);
     },
     toggleShow() {
-      console.log('enterd toggleShow');
       let target = this.$refs.barPart;
       let test = target.classList.contains("togglehide");
+      console.log("test is "+test);
       if (!test) {
         target.classList.add("togglehide");
         this.$emit("closeBar"); // 关闭导航标签的回调

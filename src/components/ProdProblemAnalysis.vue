@@ -1,8 +1,10 @@
 <template>
     <div id="sider-root">
-        <back-title titleText="生产问题排查" back-url="/"></back-title>
-            <i class="icon-left iconfont icon-menu" @click="toggleShowMenu"></i>
-            <!-- <mt-button icon="back" @click="toggleShowMenu">back</mt-button> -->
+        <back-title titleText="生产问题排查" back-url="/">
+        </back-title>
+        <i class="icon-left iconfont icon-menu" @click="toggleShowMenu"><span>更多</span></i>
+
+        <!-- <mt-button icon="back" @click="toggleShowMenu">back</mt-button> -->
         <my-menu :is-visible.sync="visible">
             <template slot="menu-title">项目</template>
         </my-menu>
@@ -27,18 +29,18 @@ export default {
     menuItem,
     BackTitle
   },
-  methods:{
-      toggleShowMenu:function(){
-          console.log("侧边栏")
-          this.visible = true;
-      }
+  methods: {
+    toggleShowMenu: function() {
+      console.log("侧边栏");
+      this.visible = true;
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.icon-left{
-    float: left;
+.icon-left {
+  float: left;
 }
 </style>
 
