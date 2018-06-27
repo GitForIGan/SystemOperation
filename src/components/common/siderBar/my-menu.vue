@@ -30,7 +30,6 @@ export default {
       this.$emit("update:isVisible", !this.isVisible);
     },
     toggleShow() {
-      console.log('enterd toggleShow');
       let target = this.$refs.barPart;
       console.log(target.classList);
 
