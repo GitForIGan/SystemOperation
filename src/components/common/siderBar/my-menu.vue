@@ -34,19 +34,11 @@ export default {
       console.log(target.classList);
 
       let test = target.classList.contains("togglehide");
-      console.log("test is " + test);
       if (!test) {
         target.classList.add("togglehide");
         this.$emit("closeBar"); // 关闭导航标签的回调
-<<<<<<< HEAD
-        // let OpenMenu = target.querySelectorAll(".openMenu");
-        // let OpenIcon = target.querySelectorAll(".openIcon");
-        // console.log(OpenIcon);
-=======
         let OpenMenu = target.querySelectorAll(".openMenu");
         let OpenIcon = target.querySelectorAll(".openIcon");
-        console.log(OpenMenu);
->>>>>>> 1b0f617b18bac6028f3a16791ee21b2dd6eb32e9
         this.$refs.barPart.style.left = -this.$refs.barPart.offsetWidth + "px";
         // for (let i = 0; i < OpenMenu.length; i++) {
         //   OpenMenu[i].classList.remove("openMenu");
@@ -66,6 +58,7 @@ export default {
   mounted() {
     this.$refs.barPart.style.left = -this.$refs.barPart.offsetWidth + "px"; // 初始化通过left值来隐藏侧边栏组件
     this.$on("closeByRoute", () => {
+      console.log("gesg");
       this.$emit("update:myVisible", !this.myVisible);
     });
   }
@@ -110,9 +103,9 @@ export default {
   transition: all ease 0.4s;
   overflow: auto;
   font-size: 16px;
-  span {
-    font-size: 1.2rem;
-  }
+  // span {
+  //   font-size: 1.2rem;
+  // }
   i {
     font-size: 1.2rem;
   }
@@ -130,76 +123,76 @@ export default {
   font-size: 14px;
   li {
     list-style: none;
-    // & > a {
-    //   color: #b8c7ce;
-    //   width: 100%;
-    //   display: inline-block;
-    //   padding: 10px;
-    //   box-sizing: border-box;
-    //   position: relative;
-    //   transition: border-left ease 0.3s;
-    // }
+    & > a {
+      color: #23a4e0;
+      width: 100%;
+      display: inline-block;
+      padding: 10px;
+      box-sizing: border-box;
+      position: relative;
+      transition: border-left ease 0.3s;
+    }
   }
-  // a {
-  //   text-decoration: none;
-  //   color: gray;
-  // }
+  a {
+    text-decoration: none;
+    color: gray;
+  }
   .list-title {
     padding: 9px;
     color: white;
   }
-  // .treeview {
-  //   background: #1a2226;
-  //   transition: all ease 0.3s;
-  //   & > a {
-  //     color: #b8c7ce;
-  //     width: 100%;
-  //     display: inline-block;
-  //     padding: 10px;
-  //     box-sizing: border-box;
-  //     transition: border-left ease 0.3s;
-  //     position: relative;
-  //     &:hover {
-  //       background: black;
-  //       color: white !important;
-  //       border-left: 3px solid white;
-  //     }
-  //   }
-  //   .pull-right-container {
-  //     position: absolute;
-  //     margin-top: -7px;
-  //     right: 20px;
-  //     top: 50%;
-  //   }
-  // }
-  // .treeview-menu {
-  //   background: #2c3b41;
-  //   transition: height 0.3s ease-out;
-  //   a {
-  //     position: relative;
-  //     padding: 5px 20px 5px 10px !important;
-  //     color: #8aa4af;
-  //     display: inline-block;
-  //     width: 100%;
-  //     box-sizing: border-box;
-  //     background: #2c3b41;
-  //     &:hover {
-  //       color: white;
-  //       border-left: none;
-  //       background: #2c3b41;
-  //     }
-  //   }
-  //   .treeview-menu {
-  //     padding-left: 20px;
-  //   }
-  //   .treeview {
-  //     background: #1a2226 !important;
-  //     transition: none !important;
-  //     a {
-  //       transition: none !important;
-  //     }
-  //   }
-  // }
+  .treeview {
+    background: #1a2226;
+    transition: all ease 0.3s;
+    & > a {
+      color: #b8c7ce;
+      width: 100%;
+      display: inline-block;
+      padding: 10px;
+      box-sizing: border-box;
+      transition: border-left ease 0.3s;
+      position: relative;
+      &:hover {
+        background: black;
+        color: white !important;
+        border-left: 3px solid white;
+      }
+    }
+    .pull-right-container {
+      position: absolute;
+      margin-top: -7px;
+      right: 20px;
+      top: 50%;
+    }
+  }
+  .treeview-menu {
+    background: #2c3b41;
+    transition: height 0.3s ease-out;
+    a {
+      position: relative;
+      padding: 5px 20px 5px 10px !important;
+      color: #8aa4af;
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+      background: #2c3b41;
+      &:hover {
+        color: white;
+        border-left: none;
+        background: #2c3b41;
+      }
+    }
+    .treeview-menu {
+      padding-left: 20px;
+    }
+    .treeview {
+      background: #1a2226 !important;
+      transition: none !important;
+      a {
+        transition: none !important;
+      }
+    }
+  }
   .openIcon {
     transform: rotate(-90deg);
     transition: all ease 0.2s;

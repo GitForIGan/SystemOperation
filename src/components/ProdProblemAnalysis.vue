@@ -6,17 +6,17 @@
     <my-menu :is-visible.sync="visible">
       <template slot="menu-title">项目</template>
       <my-submenu>
-        <i slot="icon" class=' iconfont icon-jizhang'></i>
+        <i slot="icon" class=' iconfont'></i>
         <template slot="submenu-title">
-          </i>生产数据查询</template>
+          生产数据查询</template>
         <menu-item route='/'>
-          <i slot='icon' class=' iconfont icon-403010'></i>代理人信息查询</menu-item>
-        <menu-item route='/DatePlan'>
-          <i slot='icon' class=' iconfont icon-403010'></i>投保调度查询</menu-item>
-        <menu-item route='/EatWhat'>
-          <i slot='icon' class=' iconfont icon-chi'></i>保全调度查询</menu-item>
-        <menu-item route='/memo'>
-          <i slot='icon' class=' iconfont icon-beiwanglu'></i>理赔调度查询</menu-item>
+          <i slot='icon' class=' iconfont'></i>代理人信息查询</menu-item>
+        <menu-item route='/'>
+          <i slot='icon' class=' iconfont'></i>投保调度查询</menu-item>
+        <menu-item route='/'>
+          <i slot='icon' class=' iconfont'></i>保全调度查询</menu-item>
+        <menu-item route='/'>
+          <i slot='icon' class=' iconfont'></i>理赔调度查询</menu-item>
       </my-submenu>
     </my-menu>
   </div>
