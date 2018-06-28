@@ -2,7 +2,7 @@
         <back-title titleText="APP错误日志" back-url = "/"></back-title>
 </template>
 <script>
-import  BackTitle from './common/BackTitle'
+import  BackTitle from '../components/common/BackTitle'
 export default {
     components:{
         BackTitle

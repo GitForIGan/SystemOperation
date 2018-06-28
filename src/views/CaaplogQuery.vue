@@ -84,8 +84,8 @@
     </div>
 </template>
 <script>
-import BackTitle from "./common/BackTitle";
-import ListItem from "./common/ListItem";
+import BackTitle from   "../components/common/BackTitle";
+import ListItem from    "../components/common/ListItem";
 import HTTP_CONFIG from "../config.js";
 export default {
   data() {
