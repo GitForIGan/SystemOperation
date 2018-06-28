@@ -36,16 +36,17 @@ export default {
       if (!test) {
         target.classList.add("togglehide");
         this.$emit("closeBar"); // 关闭导航标签的回调
-        let OpenMenu = target.querySelectorAll(".openMenu");
-        let OpenIcon = target.querySelectorAll(".openIcon");
+        // let OpenMenu = target.querySelectorAll(".openMenu");
+        // let OpenIcon = target.querySelectorAll(".openIcon");
+        // console.log(OpenIcon);
         this.$refs.barPart.style.left = -this.$refs.barPart.offsetWidth + "px";
-        for (let i = 0; i < OpenMenu.length; i++) {
-          OpenMenu[i].classList.remove("openMenu");
-          OpenMenu[i].style.display = "none";
-        }
-        for (let i = 0; i < OpenIcon.length; i++) {
-          OpenIcon[i].classList.remove("openIcon");
-        }
+        // for (let i = 0; i < OpenMenu.length; i++) {
+        //   OpenMenu[i].classList.remove("openMenu");
+        //   OpenMenu[i].style.display = "none";
+        // }
+        // for (let i = 0; i < OpenIcon.length; i++) {
+        //   OpenIcon[i].classList.remove("openIcon");
+        // }
       } else {
         target.removeAttribute("style");
         target.classList.remove("togglehide");
@@ -74,18 +75,18 @@ export default {
   z-index: 1111；;
 }
 .togglehide {
-  span {
-    display: none;
-  }
-  .list-title {
-    display: none;
-  }
-  .menu {
-    padding-top: 50px;
-  }
-  i {
-    font-size: 18px;
-  }
+  // span {
+  //   display: none;
+  // }
+  // .list-title {
+  //   display: none;
+  // }
+  // .menu {
+  //   padding-top: 50px;
+  // }
+  // i {
+  //   font-size: 18px;
+  // }
   .menuCover {
     display: none;
   }
@@ -95,7 +96,7 @@ export default {
   min-width: 200px;
   background: black;
   position: absolute;
-  top: 0px;
+  top: 40px;
   bottom: 0px;
   z-index: 1000;
   transition: all ease 0.4s;
@@ -121,76 +122,76 @@ export default {
   font-size: 14px;
   li {
     list-style: none;
-    & > a {
-      color: #b8c7ce;
-      width: 100%;
-      display: inline-block;
-      padding: 10px;
-      box-sizing: border-box;
-      position: relative;
-      transition: border-left ease 0.3s;
-    }
+    // & > a {
+    //   color: #b8c7ce;
+    //   width: 100%;
+    //   display: inline-block;
+    //   padding: 10px;
+    //   box-sizing: border-box;
+    //   position: relative;
+    //   transition: border-left ease 0.3s;
+    // }
   }
-  a {
-    text-decoration: none;
-    color: gray;
-  }
+  // a {
+  //   text-decoration: none;
+  //   color: gray;
+  // }
   .list-title {
     padding: 9px;
     color: white;
   }
-  .treeview {
-    background: #1a2226;
-    transition: all ease 0.3s;
-    & > a {
-      color: #b8c7ce;
-      width: 100%;
-      display: inline-block;
-      padding: 10px;
-      box-sizing: border-box;
-      transition: border-left ease 0.3s;
-      position: relative;
-      &:hover {
-        background: black;
-        color: white !important;
-        border-left: 3px solid white;
-      }
-    }
-    .pull-right-container {
-      position: absolute;
-      margin-top: -7px;
-      right: 20px;
-      top: 50%;
-    }
-  }
-  .treeview-menu {
-    background: #2c3b41;
-    transition: height 0.3s ease-out;
-    a {
-      position: relative;
-      padding: 5px 20px 5px 10px !important;
-      color: #8aa4af;
-      display: inline-block;
-      width: 100%;
-      box-sizing: border-box;
-      background: #2c3b41;
-      &:hover {
-        color: white;
-        border-left: none;
-        background: #2c3b41;
-      }
-    }
-    .treeview-menu {
-      padding-left: 20px;
-    }
-    .treeview {
-      background: #1a2226 !important;
-      transition: none !important;
-      a {
-        transition: none !important;
-      }
-    }
-  }
+  // .treeview {
+  //   background: #1a2226;
+  //   transition: all ease 0.3s;
+  //   & > a {
+  //     color: #b8c7ce;
+  //     width: 100%;
+  //     display: inline-block;
+  //     padding: 10px;
+  //     box-sizing: border-box;
+  //     transition: border-left ease 0.3s;
+  //     position: relative;
+  //     &:hover {
+  //       background: black;
+  //       color: white !important;
+  //       border-left: 3px solid white;
+  //     }
+  //   }
+  //   .pull-right-container {
+  //     position: absolute;
+  //     margin-top: -7px;
+  //     right: 20px;
+  //     top: 50%;
+  //   }
+  // }
+  // .treeview-menu {
+  //   background: #2c3b41;
+  //   transition: height 0.3s ease-out;
+  //   a {
+  //     position: relative;
+  //     padding: 5px 20px 5px 10px !important;
+  //     color: #8aa4af;
+  //     display: inline-block;
+  //     width: 100%;
+  //     box-sizing: border-box;
+  //     background: #2c3b41;
+  //     &:hover {
+  //       color: white;
+  //       border-left: none;
+  //       background: #2c3b41;
+  //     }
+  //   }
+  //   .treeview-menu {
+  //     padding-left: 20px;
+  //   }
+  //   .treeview {
+  //     background: #1a2226 !important;
+  //     transition: none !important;
+  //     a {
+  //       transition: none !important;
+  //     }
+  //   }
+  // }
   .openIcon {
     transform: rotate(-90deg);
     transition: all ease 0.2s;
