@@ -1,10 +1,10 @@
 <template>
     <div id="caap-log">
-        <back-title titleText="渠道日志查询" backUrl='/'></back-title>
+        <back-title titleText="渠道日志查询" backUrl='/home'></back-title>
         <!-- <form id="queryForm"> -->
         <div class="container_caapLog common-form  flex flex_row">
             <div class="flex flex_1">
-                <div class="flex_1 ">
+                <div class="flex_1 item">
                     <label>工程名</label>
                 </div>
                 <div class="flex_2 item">
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="flex flex_1">
-                <div class=" flex_1">
+                <div class=" flex_1 item">
                     <label>交易结果</label>
                 </div>
                 <div class="flex_2 item">
@@ -26,7 +26,7 @@
         </div>
         <div class="container_caapLog common-form  flex flex_row">
             <div class="flex flex_1">
-                <div class="flex_1 ">
+                <div class="flex_1 item">
                     <label>登录工号</label>
                 </div>
                 <div class="flex_2 item">
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="flex flex_1">
-                <div class=" flex_1">
+                <div class=" flex_1 item">
                     <label>查询条数</label>
                 </div>
                 <div class="flex_2 item">
@@ -68,12 +68,12 @@
             <div class="dia_con">
                 <div class="detailItem">
                     <div v-for="(value,key,index) in showData" :key="index">
-                        <div v-show="value !=null && value!='' && value.length>0"> 
+                        <div v-show="value !=null && value!='' && value.length>0">
                             <div class="flex_1 detailRowitem">{{key}}</div>
                             <div>
-                                  <div class="flex_1 ">{{value}}</div>
+                                <div class="flex_1 ">{{value}}</div>
                             </div>
-                          
+
                         </div>
 
                     </div>
@@ -84,8 +84,8 @@
     </div>
 </template>
 <script>
-import BackTitle from   "../components/common/BackTitle";
-import ListItem from    "../components/common/ListItem";
+import BackTitle from "../components/common/BackTitle";
+import ListItem from "../components/common/ListItem";
 import HTTP_CONFIG from "../config.js";
 export default {
   data() {
@@ -147,6 +147,7 @@ export default {
   width: 100%;
   height: auto;
   overflow-x: visible;
+  flex-wrap: wrap;
   .input_item {
     width: 100%;
     height: auto;
@@ -180,6 +181,8 @@ export default {
     border: 0;
     overflow: visible;
     font-size: 16px;
+    min-width: 80px;
+
     input {
       border: 0px solid #ebebee;
       height: 1.5rem;
@@ -189,13 +192,7 @@ export default {
     }
   }
 }
-.query-button {
-  width: 100%;
-  height: 30px;
-  color: white;
-  background-color: #11c1f3;
-  border: none;
-}
+
 .result-head {
   display: flex;
   width: 100%;

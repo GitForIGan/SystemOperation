@@ -9,7 +9,9 @@ const urlPath = urlIP + "/ydqdcaap/caap/dispatcher.do"; // 动态请求href头
 // 网络基本参数配置完成
 var CONFIG = {};
 CONFIG.PROJECT_NAME_CAAP = ProjectNameCaap;
-CONFIG.PROJECT_NAME_CEIS = ProjectNameCEIS;        
+CONFIG.PROJECT_NAME_CEIS = ProjectNameCEIS;
+
+CONFIG.urlPath = urlPath;
 // 登录请求
 CONFIG.LOGIN_SYSTEST = {
     url: urlIP + "/ydqdcaap/caap/loginSysTest.do",

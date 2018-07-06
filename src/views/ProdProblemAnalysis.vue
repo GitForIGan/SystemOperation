@@ -1,6 +1,6 @@
 <template>
   <div id="sider-root">
-    <back-title titleText="生产问题排查" back-url="/"></back-title>
+    <back-title titleText="生产问题排查" back-url="/home"></back-title>
     <i class="icon-left iconfont icon-menu" @click="toggleShowMenu"></i>
     <!-- <mt-button icon="back" @click="toggleShowMenu">back</mt-button> -->
     <my-menu :is-visible.sync="visible">
@@ -20,9 +20,10 @@
       </my-submenu>
     </my-menu>
     <!-- 局部路由 -->
-    <div class="sub-header">
+    <!-- <div class="sub-header"> -->
       <router-view></router-view>
-    </div>
+      <!-- <router-view/> -->
+    <!-- </div> -->
   </div>
 
 </template>

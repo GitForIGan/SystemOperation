@@ -8,6 +8,8 @@ import inject from './plugin/inject'
 import CSS from './style/scss/common.scss'
 import componentCss from './style/scss/component.scss'
 import '@/assets/fontIcon/iconfont.css'
+import HTTP_CONFIG from "@/config.js";
+
 
 
 Vue.use(VueResource)

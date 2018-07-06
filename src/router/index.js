@@ -5,10 +5,10 @@ import CaapLogQuery from '@/views/CaapLogQuery'
 import NetWorkTest from '@/views/NetWorkTest'
 import AppErrorLog from '@/views/AppErrorLog'
 import ProdProblemAnaly from '@/views/ProdProblemAnalysis'
-import UserInfo from '@/views/ProdProblemAnalysis/UserInfo'
-import MtStatus from '@/views/ProdProblemAnalysis/MtTranstatus'
-import MpStatus from '@/views/ProdProblemAnalysis/MpTranstatus'
-
+import UserInfo from '@/views/prodProblemAnaly/UserInfo'
+import MtStatus from '@/views/prodProblemAnaly/MtTranstatus'
+import MpStatus from '@/views/prodProblemAnaly/MpTranstatus'
+import Login from '@/views/Login'
 
 Vue.use(Router)
 
@@ -16,6 +16,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/home',
       name: 'Home',
       component: Home
     },
@@ -33,11 +38,6 @@ export default new Router({
       path: '/AppErrorLog',
       name: 'AppErrorLog',
       component: AppErrorLog
-    },
-    {
-      path: '/caapLogQuery',
-      name: 'CaapLogQuery',
-      component: CaapLogQuery
     },
     {
       path: '/prodProblemAnaly',
